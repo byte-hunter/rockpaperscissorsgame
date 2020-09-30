@@ -1,0 +1,41 @@
+import random
+
+ran = random.choice(['rock', 'paper', 'scissors'])
+print('Welcome to Rock, Paper, Scissors. Choose \n'
+      'one of the three to play the game. Good luck!')
+y = input("Choose one: ")
+print("--------------------------------")
+
+while True:
+    print(f'computer: {ran}', end="\n")
+    print("----------------------------")
+    if y == 'rock' and ran == 'rock':
+        print('draw, both you and the computer drew rock. Try again')
+        break
+    elif y == 'rock' and ran == 'paper':
+        print('you: rock, comp: paper. You lose')
+        break
+    elif y == 'rock' and ran == 'scissors':
+        print('you: rock, comp: scissors. You win')
+        break
+    elif y == 'paper' and ran == 'paper':
+        print('draw, both you and the computer drew paper. Try again')
+        break
+    elif y == 'paper' and ran == 'scissors':
+        print('you: paper, comp: scissors. You lose')
+        break
+    elif y == 'paper' and ran == 'rock':
+        print('you: paper, comp: rock. You win')
+        break
+    elif y == 'scissors' and ran == 'scissors':
+        print('draw, both you and the computer drew scissors. Try again')
+        break
+    elif y == 'scissors' and ran == 'rock':
+        print('you: scissors, comp: rock. You lose')
+        break
+    elif y == 'scissors' and ran == 'paper':
+        print('you: scissors, comp: paper. You win')
+        break
+    else:
+        print('invalid input: try again')
+        break
